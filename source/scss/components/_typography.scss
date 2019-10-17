@@ -1,0 +1,42 @@
+%typography-styles {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: $font-family;
+}
+
+h1, .h1 {
+  @extend %typography-styles;
+  font-size: 18px !important;
+  font-weight: $font-weight-regular;
+  color: #222222;
+}
+
+h2, .h2 {
+  @extend %typography-styles;
+  font-size: 15px !important;
+  font-weight: $font-weight-regular;
+  color: #cc420c;
+}
+
+h3, .h3 {
+  @extend %typography-styles;
+  font-size: 12px !important;
+  font-weight: $font-weight-bold;
+  color: #222222;
+
+}
+
+p {
+  @extend %typography-styles;
+  font-size: 12px;
+}
+
+.caption, caption {
+  font-style: italic;
+}
+
+caption {
+  padding: 10px 0;
+  font-size: 12px;
+  font-family: $font-family;
+}

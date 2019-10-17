@@ -1,0 +1,78 @@
+.popup {
+  position: relative;
+  z-index: 999;
+
+  &.b-hide {
+    display: none;
+  }
+
+  .buttons button:not(:first-child),
+  .buttons .button:not(:first-child) {
+    margin-left: 7px;
+  }
+
+  &__overlay,
+  &__body {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  &__overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(34, 34, 34, 0.5);
+  }
+
+  &__body {
+    font-size: 12px;
+    font-family: $font-family;
+    background-color: #ffffff;
+    border: none;
+    margin: 0;
+    padding: 15px 40px 15px 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 35px 0 #333333;
+    width: 100%;
+    max-width: 493px;
+    min-height: 166px;
+    display: flex;
+    flex-direction: column;
+
+    h1, .h1 {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &__close {
+    border: none;
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 50%;
+  }
+
+  &__close,
+  &__close:focus {
+    background-image: url(../img/close.svg);
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: $font-weight-bold;
+    color: #222222;
+    margin-bottom: 4px;
+  }
+
+  &__content {
+    line-height: 1.5;
+    margin-bottom: auto;
+  }
+}

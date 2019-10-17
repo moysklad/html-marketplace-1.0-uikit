@@ -1,0 +1,105 @@
+.ui-table {
+  font-family: Tahoma;
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  background-color: transparent;
+
+  th,
+  td {
+    padding: 10px;
+    line-height: 1.5;
+  }
+
+  thead {
+    th {
+      font-size: 11px;
+      text-align: left;
+      color: #186999;
+      font-weight: 400;
+      border-top: none;
+      border-bottom: 2px solid #186999;
+    }
+  }
+
+  tbody {
+    td {
+      font-size: 11px;
+      color: #222222;
+
+      a,
+      span {
+        color: #186999;
+        text-decoration: none;
+        border-bottom: 1px solid #186999;
+      }
+
+      a:hover {
+        opacity: 0.8;
+      }
+    }
+
+    tr:not(:first-child) td {
+      border-top: 1px solid #dddddd;
+      border-bottom: none;
+    }
+  }
+
+  tfoot {
+    td {
+      font-size: 11px;
+      color: #222222;
+      font-weight: 700;
+      border-top: 1px solid #186999;
+      border-bottom: none;
+    }
+  }
+
+  &__pager {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 180px;
+    font-weight: 400;
+  }
+
+  &__buttons {
+    font-size: 0;
+
+    a:not(:first-child) {
+      margin-left: 4px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+  }
+
+  &__button {
+    font-family: Tahoma;
+    width: 13px;
+    height: 13px;
+    border-radius: 2px;
+    color: #02679d;
+    border: solid 1px #02679d;
+    background-color: transparent;
+    font-size: 8px;
+    padding: 0;
+    line-height: 1;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    &[disabled] {
+      color: #cccccc;
+      border-color: #cccccc;
+    }
+
+    &[disabled]:hover {
+      opacity: 1;
+    }
+  }
+}
