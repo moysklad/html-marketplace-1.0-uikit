@@ -52,5 +52,5 @@ HTML заголовки, начиная с `<h1>` до `<h3>`, доступны 
 **Таблицы**
 
 Таблица добавляется тегом `<table class="ui-table">`. Навигация в таблице находится в подвале `<tfoot>` внутри блока `<div class="ui-table__pager">`.
-Элементы управления распологоются в `<div class="ui-table__buttons">` и добавляются с помощью `<a href="#" class="ui-table__link"><button class="ui-table__button" title=""></button></a>`.
+Элементы управления располагаются в `<div class="ui-table__buttons">` и добавляются с помощью `<a href="#" class="ui-table__link"><button class="ui-table__button" title=""></button></a>`.
 Для отображения количества страниц используется блок `<div class="ui-table__count">`.
