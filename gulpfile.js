@@ -32,8 +32,10 @@ gulp.task("styles", plugins.parameterized(function (args) {
             autoprefixer(),
             mqpacker({sort: true})
         ]))
-        .pipe(plugins.if(args.params.production, plugins.csso({comments: false})))
         .pipe(gulp.dest("./build/css"))
+        .pipe(plugins.if(args.params.production, plugins.csso({comments: false})))
+        .pipe(plugins.if(args.params.production, plugins.rename("uikit.min.css")))
+        .pipe(plugins.if(args.params.production, gulp.dest("./build/css")))
 }));
 
 gulp.task("scripts", plugins.parameterized(function (args) {
@@ -42,8 +44,10 @@ gulp.task("scripts", plugins.parameterized(function (args) {
         .pipe(plugins.include())
         .pipe(plugins.concat("uikit.js"))
         .pipe(plugins.babel({"presets": ["@babel/preset-env"]}))
-        .pipe(plugins.if(args.params.production, plugins.uglify()))
         .pipe(gulp.dest("./build/js"))
+        .pipe(plugins.if(args.params.production, plugins.uglify()))
+        .pipe(plugins.if(args.params.production, plugins.rename("uikit.min.js")))
+        .pipe(plugins.if(args.params.production, gulp.dest("./build/js")))
 }));
 
 gulp.task("html", function () {
