@@ -28,6 +28,7 @@
     "gulp-parameterized": "^0.1.1",
     "gulp-postcss": "^8.0.0",
     "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^2.0.0",
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^4.0.2",
     "gulp-svgstore": "^7.0.1",
